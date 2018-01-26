@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.js"></script>
+  </head>
+
+  <body>
+    
+    <main id="sample">
+      <div>
+          <h5>Вычисляемые данные экземпляра Vue</h5>
+          <p><small>(фактически это содержимое Vuex-store):</small></p>
+          <code>{{ record }}</code>
+      </div>
+      <div>
+        <h5>Данные экземпляра Vue:</h5>
+        <small>Событие:</small> <code>{{ localdata.head.eventName }}</code><br/>
+        <small>Год:</small> <code>{{ localdata.head.year }}</code><br/>
+        <small>Город:</small> <code>{{ localdata.address.city }}</code><br/>
+        <small>Места:</small><br/>
+        <code v-for="place in localdata.address.places">{{ place }}<br/></code>
+      </div>
+        
+      <div>
+        <h5>Измените данные:</h5>
+        <change-event :the_event="localdata.head.eventName"></change-event>
+        <change-year :the_year="localdata.head.year"></change-year>
+        <change-city :the_city="localdata.address.city"></change-city>
+        <change-places :the_places="localdata.address.places"></change-places>
+      </div>
+    </main>
+    
+    <script src="vuex-store.js"></script>
+    <script src="components.js"></script>
+    <script src="VueInstance.js"></script>
+  </body>
+
+</html>

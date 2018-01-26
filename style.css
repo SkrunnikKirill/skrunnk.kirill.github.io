@@ -1,0 +1,37 @@
+body {
+  font-family: monospace;
+  font-size:14px;
+  margin:0;
+  padding:20px;
+}
+div {
+  border: inset 1px;
+  padding: 0 10px 20px 10px;
+}
+small, legend {
+  color:#357;
+  font-family: monospace;
+  font-size:14px;
+}
+h5 {
+  color: #807;
+  font-size:16px;
+}
+section {
+  margin-left:40px;
+}
+input {
+  padding: 4px 10px;
+  background-color:#dde;
+  font-family: monospace;
+  width:50%;
+}
+.plus-button {
+  display:block;
+  font-size:25px;
+  border-radius:100%;
+  padding:0 8px;
+}
+.plus-button:before {
+  content:'+';
+}
